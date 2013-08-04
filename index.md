@@ -15,8 +15,10 @@ subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on most ser
 
 ## Open Source Projects
 
- * [Project a](http://fava.com)
- * Project b
+ * [Django OAhuth Toolkit](https://github.com/evonove/django-oauth-toolkit) OAuth goodies for the Djangonauts.
+ * [This site](https://github.com/masci/masci.github.io) /dev/
+ * [Webfactor](https://bitbucket.org/evonove/webfactor) Point and click deploy control tool built with Flask
+ * [Milliways](https://bitbucket.org/masci/milliways) The game at the end of the universe
 
 ## Follow me
 
