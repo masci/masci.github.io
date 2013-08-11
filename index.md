@@ -1,7 +1,7 @@
 ---
 layout: home
 title: /dev/
-subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on most services.
+subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on some services.
 ---
 {% include JB/setup %}
 
@@ -24,5 +24,6 @@ subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on most ser
 
  * [masci]({{ site.author.github }}) on GitHub
  * [maxpippi]({{ site.author.twitter }}) on Twitter
+ * [Massimiliano Pippi](https://plus.google.com/u/0/108169144912465121257/) on G+
  * [masci]({{ site.author.flickr }}) on Flickr
  * [Massimiliano Pippi]({{ site.author.linkedin }}) on LinkedIn
