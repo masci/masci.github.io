@@ -47,7 +47,7 @@ Start an empty project:
     cd notification_example
     python manage.py startapp notification
 
-Now for some dependencies - install Django Stored Messages and [Django Rest Framework]():
+Now for some dependencies - install Django Stored Messages and [Django Rest Framework](http://http://django-rest-framework.org/):
 
     pip install django-stored-messages djangorestframework
 
@@ -91,6 +91,7 @@ viewing the messages, so we provide a login form directly inside the homepage. T
 from django.views.generic import FormView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.messages import add_message
+from django.contrib.auth import login
 
 import stored_messages
 
@@ -110,8 +111,9 @@ class IndexView(FormView):
 
 We're going to use _class based views_, of course. Notice Django Stored Messages let us make use of the builtin 
 messages api, thus passing in a message of type `stored_messages.STORED_INFO` will cause that message to be stored on 
-the database. The homepage template will be extended from a [basic Boostrap3 template](https://github.
-com/masci/notification_example/blob/master/templates/base.html), we're going onto details later.
+the database. 
+The [homepage template](https://github.com/masci/notification_example/blob/master/templates/notification/homepage.html)
+will be extended from a [basic Boostrap3 template](https://github.com/masci/notification_example/blob/master/templates/base.html), we're going onto details later.
 
 The message view
 ----------------
@@ -120,6 +122,8 @@ This is a simple `TemplateView`, the only trick here is getting from the urlstri
 notifications or only the _unread_ ones:
 
 {% highlight python %}
+from django.views.generic import TemplateView
+
 class MessagesView(TemplateView):
     template_name = 'notification/messages.html'
 
