@@ -15,6 +15,7 @@ subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on some ser
 
 ## Open Source Projects
 
+ * [Django Stored Messages](https://github.com/evonove/django-stored-messages)
  * [Django OAhuth Toolkit](https://github.com/evonove/django-oauth-toolkit) OAuth goodies for the Djangonauts.
  * [This site](https://github.com/masci/masci.github.io) /dev/
  * [Webfactor](https://bitbucket.org/evonove/webfactor) Point and click deploy control tool built with Flask
