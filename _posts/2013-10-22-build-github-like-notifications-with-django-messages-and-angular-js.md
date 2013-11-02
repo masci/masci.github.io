@@ -3,7 +3,7 @@ layout: post
 title: "Build GitHub like notifications with Django messages and AngularJS"
 description: ""
 category: 
-tags: []
+tags: [django,python,angularjs]
 ---
 {% include JB/setup %}
 
