@@ -116,6 +116,6 @@ we need to authenticate: a third party service or a mobile app for example.
 
 Even if security level is similar, using OAuth2 allows much more control and flexibility than using username and password,
 provided that communication occurs over SSL. Well, the server has to manage a slightly more complex workflow when using
-OAuth2 (think about applications registration and tokens management), but since OAuth2 is a standard described in RFC0000 
+OAuth2 (think about applications registration and tokens management), but since OAuth2 is a standard described in [RFC6749](http://tools.ietf.org/html/rfc6749) 
 there are plenty of libraries and software components which implement the protocol and can be used to drastically reduce 
 the code needed.
