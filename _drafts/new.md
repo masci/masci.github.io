@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OAuth2 something"
+title: "Stop asking users for passwords and let OAuth2 do the job instead"
 description: ""
 category: 
 tags: []
@@ -56,7 +56,7 @@ and curl on your local machine as a client.
 ### Register an app
 
 Go to [OAuth2 Playground](http://django-oauth-toolkit.herokuapp.com/), a fully functional OAuth2 provider written
-in Django, foolow the menu *OAuth2 Provider --> Register an Application* and login with test/test username and 
+in Django, follow the menu *OAuth2 Provider --> Register an Application* and login with test/test username and 
 password. Give a name to your application (this is particulary useful in some flows), choose suitable values for
 *client id* and *client secret* fields or leave the defaults (they're automatically generated in a safe way by
 the system), choose *Public* as *Client type* and *Resource owner password-based* as *Authorization grant type*.
@@ -69,4 +69,53 @@ Now we need a token to access resources on the Playground server. We will ask fo
 and the user *test* of whom we know username and password; the url where retrieve the token is */o/token* 
 (every OAuth2 provider has its own url mapping of course), let's go there with curl:
 
-	curl -d "grant_type=password&client_id=client_id&username=test&password=test" http://localhost:8000/o/token/
+	curl -d "grant_type=password&client_id=client_id&username=test&password=test" http://django-oauth-toolkit.herokuapp.com/o/token/
+
+If everything goes smooth, server will answer with something like this:
+
+	{
+	    "refresh_token": "a_refresh_token_here", 
+	    "token_type": "Bearer", 
+	    "scope": "example", 
+	    "access_token": "the_access_token", 
+	    "expires_in": 36000
+	}
+
+The server provided also a refresh token, a second token which can be swapped for a new access token
+at any time before the current one expires. With the access token provided, we can authenticate against the server
+using `Authorization` header and providing our access token. In this example, we're going to access detailed data
+for our application through a proper endpoint:
+
+	curl -H "Authorization: Bearer the_access_token" http://django-oauth-toolkit.herokuapp.com/api/v1/applications/client_id/
+
+If the server successfully authenticate and the scopes provided are enough to access the data we requested, we will
+receive a response in json format similar to this:
+
+    [{
+        "model": "example.myapplication", 
+        "pk": 2, 
+        "fields": {
+            "client_type": "public", 
+            "user": 2, 
+            "client_id": "", 
+            "name": "My own APP", 
+            "authorization_grant_type": "password", 
+            "client_secret": "", 
+            "description": "", 
+            "redirect_uris": ""
+        }
+    }]
+
+From now on, our credentials are represented by the access token, with benefits for both users and the service provider: 
+the token can be revoked by the server if needed (account suspension, abuse of the service, etc.), or can be revoked 
+by ourselves if we do not want to access that service anymore. Or it can be refreshed with a new token if we fear our 
+old one would be compromised. We had to provide username and password just once but now we can use the token anywhere 
+we need to authenticate: a third party service or a mobile app for example. 
+
+## So what?
+
+Even if security level is similar, using OAuth2 allows much more control and flexibility than using username and password,
+provided that communication occurs over SSL. Well, the server has to manage a slightly more complex workflow when using
+OAuth2 (think about applications registration and tokens management), but since OAuth2 is a standard described in RFC0000 
+there are plenty of libraries and software components which implement the protocol and can be used to drastically reduce 
+the code needed.
