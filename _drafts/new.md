@@ -3,7 +3,7 @@ layout: post
 title: "Stop asking users for passwords and let OAuth2 do the job instead"
 description: ""
 category: 
-tags: []
+tags: [oauth2,django,security,authentication]
 ---
 {% include JB/setup %}
 
