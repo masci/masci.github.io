@@ -26,7 +26,7 @@ to another party to let them access their own data, and if your users are smart,
 with that. Moreover, if some user changes her password on your server, access would be denied to other services.
 
 You can avoid the hassle using a token instead of an username and password pair: you can change it whenever you
-want without users caring about, you can revoke it at any time in case of trouble without suspend user accounts,
+want without users caring about, you can revoke it at any time in case of trouble without suspending user accounts,
 you can give it to other parties with the consensus of your users without making them reveal any secret. Token
 authentication is practical and secure, but how to implement it?
 
