@@ -17,7 +17,8 @@ transmission occurs over SSL and it has some pros: it's easy to implement and it
 [HTTP Authorization header](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.8), largely supported
 by almost all the HTTP clients out in the wild.
 
-But what if an user falls in a SSL based man-in-the-middle attack? Her credentials would be compromised and 
+But what if an user falls in a SSL based man-in-the-middle attack (see section 4.8 of the 
+[rfc2617](http://www.ietf.org/rfc/rfc2617.txt))? Her credentials would be compromised and 
 when you realize it, you could be forced to suspend user's account or reset her password at minimum. 
 
 And what if your web resource is accessed by third party services? You would force users to reveal their password
@@ -69,7 +70,7 @@ Now we need a token to access resources on the Playground server. We will ask fo
 and the user *test* of whom we know username and password; the url where retrieve the token is */o/token* 
 (every OAuth2 provider has its own url mapping of course), let's go there with curl:
 
-	curl -d "grant_type=password&client_id=client_id&username=test&password=test" http://django-oauth-toolkit.herokuapp.com/o/token/
+	curl -d "grant_type=password&client_id=your_client_id_here&username=test&password=test" http://django-oauth-toolkit.herokuapp.com/o/token/
 
 If everything goes smooth, server will answer with something like this:
 
@@ -86,7 +87,7 @@ at any time before the current one expires. With the access token provided, we c
 using `Authorization` header and providing our access token. In this example, we're going to access detailed data
 for our application through a proper endpoint:
 
-	curl -H "Authorization: Bearer the_access_token" http://django-oauth-toolkit.herokuapp.com/api/v1/applications/client_id/
+	curl -H "Authorization: Bearer the_access_token_here" http://django-oauth-toolkit.herokuapp.com/api/v1/applications/your_client_id_here/
 
 If the server successfully authenticate and the scopes provided are enough to access the data we requested, we will
 receive a response in json format similar to this:
@@ -116,6 +117,6 @@ we need to authenticate: a third party service or a mobile app for example.
 
 Even if security level is similar, using OAuth2 allows much more control and flexibility than using username and password,
 provided that communication occurs over SSL. Well, the server has to manage a slightly more complex workflow when using
-OAuth2 (think about applications registration and tokens management), but since OAuth2 is a standard described in [RFC6749](http://tools.ietf.org/html/rfc6749) 
-there are plenty of libraries and software components which implement the protocol and can be used to drastically reduce 
-the code needed.
+OAuth2 (think about applications registration and tokens management), but since OAuth2 is a standard described in 
+[RFC6749](http://tools.ietf.org/html/rfc6749) there are plenty of libraries and software components which implement the 
+protocol and can be used to drastically reduce the code needed.
