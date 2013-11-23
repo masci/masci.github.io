@@ -5,7 +5,7 @@
       {% if page.subtitle %}<p>"{{ page.subtitle }}"</p>{% endif %}
       <br><hr>
       <span class="credits left">Written by: <a href="{{ author.github }}">{{ site.author.name }}</a></span>
-      <span class="credits right">Last updated: {{ page.date }}</span>
+      <span class="credits right">Last updated: {{ page.date | date_to_string }}</span>
     </div>
     {{ content }}
     <hr>
