@@ -25,6 +25,7 @@ subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on some ser
 
  * [masci]({{ site.author.github }}) on GitHub
  * [maxpippi]({{ site.author.twitter }}) on Twitter
- * [Massimiliano Pippi](https://plus.google.com/u/0/108169144912465121257/) on G+
+ * [Massimiliano Pippi](https://plus.google.com/MassimilianoPippi) on G+
  * [masci]({{ site.author.flickr }}) on Flickr
  * [Massimiliano Pippi]({{ site.author.linkedin }}) on LinkedIn
+ * [masci]({{ site.author.speakerdeck }}) on Speakerdeck
