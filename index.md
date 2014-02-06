@@ -15,8 +15,9 @@ subtitle: I'm Massimiliano Pippi, software developer, <em>masci</em> on some ser
 
 ## Open Source Projects
 
- * [Django Stored Messages](https://github.com/evonove/django-stored-messages) django.contrib.messages on steroids.
  * [Django OAuth Toolkit](https://github.com/evonove/django-oauth-toolkit) OAuth goodies for the Djangonauts.
+ * [Django Stored Messages](https://github.com/evonove/django-stored-messages) django.contrib.messages on steroids.
+ * [Django Appengine Toolkit](https://github.com/masci/django-appengine-toolkit) Helper for deploying Django on Google App Engine
  * [This site](https://github.com/masci/masci.github.io) /dev/
  * [Webfactor](https://bitbucket.org/evonove/webfactor) Point and click deploy control tool built with Flask
  * [Milliways](https://bitbucket.org/masci/milliways) The game at the end of the universe
