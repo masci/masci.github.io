@@ -10,9 +10,8 @@ tags: [django,google,python,appengine,gcs]
 ## Intro
 
 On of the features of [Django Appengine Toolkit](https://github.com/masci/django-appengine-toolkit) is simplifying 
-the configurations neede to make Google Cloud Storage a static files storage for Django applications running on 
-Google App Engine. Infact all you have to do to use GCS as the destination of your uploads is writing something 
-like this in your settings.py module:
+the work needed to configure Google Cloud Storage as a static files storage for Django applications running on 
+Google App Engine. Infact all you have to do is writing something like this in your settings.py module:
 
 {% highlight python %}
 APPENGINE_TOOLKIT = {
@@ -26,11 +25,11 @@ STATICFILE_STORAGE = 'appengine_toolkit.storage.GoogleCloudStorage'
 ## A complete example
 
 [This repo](https://github.com/masci/django_cloudstorage_example) contains a minimalistic Django project
-implementing a file storage application that permits users to upload files, listing and delete them. The project has just
+implementing a file storage application that lets users upload, listing, retrieve and delete files. The project has just
 one app implementing all the logic, defining the model and exposing the views. For detailed instructions on how to
 setup a Django project on App Engine with `django-appengine-toolkit` please check out 
-[this blog post](http://dev.pippi.im/2014/02/10/create-a-blog-in-minutes-on-app-engine-with-django/)
-before playing with this project. Now let's take a look at the code.
+[this blog post](http://dev.pippi.im/2014/02/10/create-a-blog-in-minutes-on-app-engine-with-django/). 
+Now let's take a look at the code.
 
 ### The Model
 
@@ -45,12 +44,12 @@ class Document(models.Model):
 {% endhighlight %}
 
 Pretty easy, we have just one field containing the file. Notice the delete method we're going to use so that
-once deleted an instance, the same will happen to corresponding file on Cloud Storage.
+when an instance is deleted, the same will happen to corresponding file on Cloud Storage.
 
 ### The views
 
 Hail to the Class Based Views! Look at how few lines of code we need for the main view, implementing the listing and
-the logic for the uploads:
+the logic for the uploads, form included:
 
 {% highlight python %}
 class FileManagerView(CreateView):
@@ -63,8 +62,9 @@ class FileManagerView(CreateView):
         return super(FileManagerView, self).get_context_data(**kwargs)
 {% endhighlight %}
 
-We need to ovverride `get_context_data` method to show the list of files in the main view,  injecting the queryset 
-so the template can render properly. This hack is needed because we need to have a `CreateView` and `ListView` hybrid.
+Since we need to show the list of files **and** the form to upload them on the same page, we cannot use a `CreateView` as is,
+what we need is a `CreateView` and `ListView` hybrid instead, thus the hack of overriding `get_context_data`: we inject the queryset 
+in the context so the template can render properly.
 
 The relevant html code in the template looks like this:
 
@@ -100,7 +100,7 @@ class FileRemoveView(DeleteView):
 {% endhighlight %}
 
 Ok, this was short. Basically we only need to tell to the class based view which is the model and where to go once the istance
-is deleted.
+is deleted. Wow.
 
 ### The urls
 
