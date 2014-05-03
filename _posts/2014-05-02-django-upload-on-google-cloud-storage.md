@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Uploading files on Google Cloud Storage with Django"
+title: "Uploading files to Google Cloud Storage with Django"
 description: ""
 category: 
 tags: [django,google,python,appengine,gcs]
