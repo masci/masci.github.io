@@ -24,7 +24,7 @@ BLOG_TITLE = "/dev/"  # (translatable)
 SITE_URL = "http://dev.pippi.im"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "http://dev.pippi.im"
+BASE_URL = "http://dev.pippi.im/"
 BLOG_EMAIL = "mpippi@gmail.com"
 BLOG_DESCRIPTION = "I'm Massimiliano Pippi, software developer, masci on some services."  # (translatable)
 
