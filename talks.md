@@ -22,7 +22,7 @@ During the talk we will see which are the foundations of good documentation and 
 open source project take off.
 
 [Slides](https://speakerdeck.com/masci/if-code-is-poetry-then-documentation-is-prose)
-[Video](...)
+[Video](https://www.youtube.com/watch?v=Yovew2KMbI4)
 
 ## Full­stack developer with Django and AngularJS
 
