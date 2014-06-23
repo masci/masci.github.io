@@ -158,6 +158,7 @@ TIMEZONE = "Europe/Rome"
 # to feeds and are considered part of a blog, while PAGES are
 # just independent HTML pages.
 #
+
 POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     # this line is for contents imported from jekyll
