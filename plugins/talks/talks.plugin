@@ -1,0 +1,15 @@
+[Core]
+Name = talks
+Module = talks
+Tests = test_talks
+
+[Nikola]
+MinVersion = 6.0.0
+MaxVersion = 7.0.0
+
+[Documentation]
+Author = Massimiliano Pippi
+Version = 0.1
+Website =
+Description = Dummy plugin
+
