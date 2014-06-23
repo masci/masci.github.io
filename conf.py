@@ -21,10 +21,10 @@ BLOG_AUTHOR = "masci"  # (translatable)
 BLOG_TITLE = "/dev/"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://dev.pippi.im"
+SITE_URL = "/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-BASE_URL = "http://dev.pippi.im/"
+#BASE_URL = "http://dev.pippi.im/"
 BLOG_EMAIL = "mpippi@gmail.com"
 BLOG_DESCRIPTION = "I'm Massimiliano Pippi, software developer, masci on some services."  # (translatable)
 
@@ -93,6 +93,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 # (the same way you would do with a (translatable) setting.)
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("/stories/talks/", "Talks"),
         ("/archive.html", "Archive"),
         ("/categories/index.html", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -100,7 +101,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "masci"
 
 # Below this point, everything is optional
 
@@ -157,7 +158,6 @@ TIMEZONE = "Europe/Rome"
 # to feeds and are considered part of a blog, while PAGES are
 # just independent HTML pages.
 #
-
 POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     # this line is for contents imported from jekyll
@@ -188,13 +188,13 @@ COMPILERS = {
     "textile": ('.textile',),
     "txt2tags": ('.t2t',),
     "bbcode": ('.bb',),
-    "wiki": ('.wiki',),
-    "ipynb": ('.ipynb',),
+    # "wiki": ('.wiki',),
+    # "ipynb": ('.ipynb',),
     "html": ('.html', '.htm'),
     # PHP files are rendered the usual way (i.e. with the full templates).
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
-    "php": ('.php',),
+    # "php": ('.php',),
     # Pandoc detects the input from the source filename
     # but is disabled by default as it would conflict
     # with many of the others.
