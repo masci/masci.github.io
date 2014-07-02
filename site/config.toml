@@ -1,6 +1,8 @@
 baseurl = "http://dev.pippi.im/"
 languageCode = "en-us"
 title = "/dev/"
+pygmentsstyle = "manni"
 
 [params]
     AuthorName = "masci"
+

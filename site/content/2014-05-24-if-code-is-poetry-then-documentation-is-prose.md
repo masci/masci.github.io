@@ -45,22 +45,22 @@ fact? Hell, no!
 
 Now what about something like this:
 
-{% highlight python %}
+{{% highlight python %}}
 lock = threading.lock()
 lock.acquire()
 try:
     print("Let's get critical")
 finally:
     lock.release()
-{% endhighlight %}
+{{% /highlight %}}
 
 Do you get the aesthetic, the rhythm, the meaning? Maybe the meaning, but the rest is rather ordinary. And what about this?
 
-{% highlight python %}
+{{% highlight python %}}
 lock = threading.lock()
 with lock:
     print("Let's get critical")
-{% endhighlight %}
+{{% /highlight %}}
 
 Do you spot the difference? If not, you’re taste is broken, otherwise you get the point and we can agree that code could be a 
 form of poetry, or at least that it's possible to write code in a poetic fashion.
@@ -86,14 +86,14 @@ its english translation:
 As poets do, most developers can write beautiful and elegant code, they really enjoy doing it but how hard is reading their works?
 Let's see an example of well written code:
 
-{% highlight python %}
+{{% highlight python %}}
 from itertools import chain, islice
 
 def chunks(iterable, size, format=iter):
     it = iter(iterable)
     while True:
         yield format(chain((it.next(),), islice(it, size - 1)))
-{% endhighlight %}
+{{% /highlight %}}
 
 > Ok, give me a sec...
 
