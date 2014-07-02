@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{{ template "theme/partials/head.html" . }}
+  <body>
+    {{ template "theme/partials/navbar.html" . }}
+
+    <div class="container">
+      <p class="text-muted">
+        I'm Massimiliano Pippi, masci on some services... 
+      </p>
+      <h1>Writings</h1>
+      <p class="text-muted">
+        <small>These are the latest entries, check the <a href="#">Archive</a> for a complete list</small>
+      </p>
+      <ul>
+      {{ range first 5 .Data.Pages.ByDate.Reverse }}
+        <li>
+          <span class="text-muted post-list-date">[{{ .Date.Format "Jan 02, 2006" }}]</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+      </ul>
+
+      <h1>Open Source Projects</h1>
+      <ul>
+        <li>
+          <a href="https://github.com/evonove/django-oauth-toolkit">Django OAuth Toolkit</a> OAuth goodies for the Djangonauts.
+        </li>
+        <li>
+          <a href="https://github.com/evonove/django-stored-messages">Django Stored Messages</a> django.contrib.messages on steroids.
+        </li>
+        <li>
+          <a href="https://github.com/masci/django-appengine-toolkit">Django Appengine Toolkit</a> Helper for deploying Django on Google App Engine
+        </li>
+        <li>
+          <a href="https://github.com/masci/masci.github.io">/dev/</a> This site
+        </li>
+        <li>
+          <a href="https://bitbucket.org/evonove/webfactor">Webfactor</a> Point and click deploy control tool built with Flask
+        </li>
+        <li>
+          <a href="https://bitbucket.org/masci/milliways">Milliways</a> The game at the end of the universe
+        </li>
+      </ul>
+
+      <h1>Follow me</h1>
+      <ul>
+        <li><a href="https://github.com/masci">masci</a> on GitHub</li>
+        <li><a href="https://twitter.com/maxpippi">maxpippi</a> on Twitter</li>
+        <li><a href="http://www.flickr.com/photos/masci">masci</a> on Flickr</li>
+        <li><a href="http://www.linkedin.com/in/masci">Massimiliano Pippi</a> on LinkedIn</li>
+        <li><a href="https://speakerdeck.com/masci">masci</a> on Speakerdeck</li>
+      </ul>
+
+      {{ template "theme/partials/footer.html" . }}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootswatch.js"></script>
+  </body>
+</html>
+

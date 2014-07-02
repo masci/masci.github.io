@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{ template "theme/partials/head.html" . }}
+    <body>
+        {{ template "theme/partials/navbar.html" . }}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <ul class="posts">
+                        {{ range .Data.Pages }}
+                        <li>
+                            <span>
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <time class="pull-right post-list">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time>
+                            </span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    AAA
+                </div>
+            </div>
+            {{ template "theme/partials/footer.html" . }}
+        </div>
+    </body>
+</html>
