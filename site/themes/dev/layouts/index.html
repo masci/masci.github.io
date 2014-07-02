@@ -13,7 +13,7 @@
       <p class="text-muted">
         <small>These are the latest entries, check the <a href="#">Archive</a> for a complete list</small>
       </p>
-      <ul>
+      <ul class="list-unstyled">
       {{ range first 5 .Data.Pages.ByDate.Reverse }}
         <li>
           <span class="text-muted post-list-date">[{{ .Date.Format "Jan 02, 2006" }}]</span>
@@ -23,7 +23,7 @@
       </ul>
 
       <h1>Open Source Projects</h1>
-      <ul>
+      <ul class="list-unstyled">
         <li>
           <a href="https://github.com/evonove/django-oauth-toolkit">Django OAuth Toolkit</a> OAuth goodies for the Djangonauts.
         </li>
@@ -45,7 +45,7 @@
       </ul>
 
       <h1>Follow me</h1>
-      <ul>
+      <ul class="list-unstyled">
         <li><a href="https://github.com/masci">masci</a> on GitHub</li>
         <li><a href="https://twitter.com/maxpippi">maxpippi</a> on Twitter</li>
         <li><a href="http://www.flickr.com/photos/masci">masci</a> on Flickr</li>
