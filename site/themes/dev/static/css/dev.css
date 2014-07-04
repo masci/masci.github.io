@@ -48,7 +48,7 @@ body {
 }
 
 footer{
-    margin:5em 0
+    margin:2em 0
 }
 
 footer li{
@@ -195,3 +195,24 @@ footer p{
 .voffset8 { margin-top: 100px; }
 .voffset9 { margin-top: 150px; }
 
+img { max-width: 100% }
+
+a > i.fa:hover {
+    color: #999;
+}
+
+a > i.fa {
+    color: #b3b3b3;
+}
+
+@media (min-width: 991px) and (max-width: 1199px){
+    div.container-home {
+        width: 750px;
+    }    
+}
+
+@media (min-width: 1199px){
+    div.container-home {
+        width: 970px;
+    }    
+}
