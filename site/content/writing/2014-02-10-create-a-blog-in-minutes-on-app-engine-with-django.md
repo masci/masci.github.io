@@ -4,7 +4,9 @@ description: ""
 category: 
 tags: ["django", "google", "python", "appengine", "cloudsql"]
 date: "2014-02-10"
-slug: "/2014/02/10/create-a-blog-in-minutes-on-app-engine-with-django/"
+slug: "create-a-blog-in-minutes-on-app-engine-with-django/"
+aliases:
+ - "/2014/02/10/create-a-blog-in-minutes-on-app-engine-with-django/"
 ---
 
 ## Intro

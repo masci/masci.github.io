@@ -4,7 +4,9 @@ description: ""
 category: 
 tags: ["django", "oauth2", "security", "authentication"]
 date: "2013-11-10"
-slug: "/2013/11/10/stop-asking-users-for-passwords-and-let-oauth2-do/"
+slug: "stop-asking-users-for-passwords-and-let-oauth2-do"
+aliases:
+ - "/2013/11/10/stop-asking-users-for-passwords-and-let-oauth2-do/"
 ---
 
 ## Who said authentication?

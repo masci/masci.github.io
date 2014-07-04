@@ -4,7 +4,9 @@ description: ""
 category: 
 tags: ["python", "docs"]
 date: "2014-05-24"
-slug: "/2014/05/24/if-code-is-poetry-then-documentation-is-prose/"
+slug: "if-code-is-poetry-then-documentation-is-prose"
+aliases:
+ - "/2014/05/24/if-code-is-poetry-then-documentation-is-prose/"
 ---
 
 ## What is poetry?

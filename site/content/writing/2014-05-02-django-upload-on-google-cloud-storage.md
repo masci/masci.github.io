@@ -4,7 +4,9 @@ description: ""
 category: 
 tags: ["django", "google", "python", "appengine", "gcs"]
 date: "2014-05-02"
-slug: "/2014/05/02/django-upload-on-google-cloud-storage/"
+slug: "django-upload-on-google-cloud-storage"
+aliases:
+ - "/2014/05/02/django-upload-on-google-cloud-storage/"
 ---
 
 ## Intro

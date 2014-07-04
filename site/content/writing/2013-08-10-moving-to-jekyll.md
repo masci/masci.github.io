@@ -4,7 +4,9 @@ description: ""
 category: 
 tags: ["blogging", "jekyll", "wordpress"]
 date: "2013-08-10"
-slug: "/2013/08/10/moving-to-jekyll/"
+slug: "moving-to-jekyll"
+aliases:
+ - "/2013/08/10/moving-to-jekyll/"
 ---
 
 I started writing on a personal blog in November, 2006 and I choose a Wordpress instance at
