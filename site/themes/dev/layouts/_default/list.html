@@ -3,11 +3,11 @@
     {{ template "theme/partials/head.html" . }}
     <body>
         {{ template "theme/partials/navbar.html" . }}
-
         <div class="container">
+            <h1>{{ .Title }}</h1>
             <div class="row">
                 <div class="col-lg-8">
-                    <ul class="posts">
+                    <ul class="posts list-unstyled">
                         {{ range .Data.Pages }}
                         <li>
                             <span>
@@ -17,9 +17,6 @@
                         </li>
                         {{ end }}
                     </ul>
-                </div>
-                <div class="col-lg-4">
-                    AAA
                 </div>
             </div>
             {{ template "theme/partials/footer.html" . }}
