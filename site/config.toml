@@ -2,7 +2,7 @@ baseurl = "http://dev.pippi.im/"
 languageCode = "en-us"
 title = "/dev/"
 pygmentsstyle = "manni"
+disqusShortname = "dev-pippi"
 
 [params]
     AuthorName = "masci"
-
